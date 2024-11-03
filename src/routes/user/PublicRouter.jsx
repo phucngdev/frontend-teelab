@@ -14,8 +14,10 @@ import Cookies from "js-cookie";
 const PublicRouter = () => {
   const dispatch = useDispatch();
   const userCookie = useCookie("user_info", false);
+  console.log("🚀 ~ PublicRouter ~ userCookie:", userCookie);
 
   const [user, setUser] = useState(userCookie || null);
+  console.log("🚀 ~ PublicRouter ~ user:", user);
 
   useEffect(() => {
     if (userCookie) {
